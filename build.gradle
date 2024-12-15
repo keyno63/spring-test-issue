@@ -26,3 +26,13 @@ dependencies {
 	// when spring-web is added, the invocation of MockHttpServletResponse in tests succeeds.
 //	testRuntimeOnly 'org.springframework:spring-web:6.2.0'
 }
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+test {
+	testLogging {
+		exceptionFormat 'full'
+	}
+}
